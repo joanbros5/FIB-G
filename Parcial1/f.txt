@@ -1,0 +1,7 @@
+float f(vec3 Q)
+{
+	float x = Q.x*1.65;
+	float y = Q.y*1.9;
+	float z = Q.z*1.01;
+	return 2*y*(y*y-3*x*x)*(1-z*z)+pow(x*x+y*y,2)-(9*z*z-1)*(1-z*z); 
+}

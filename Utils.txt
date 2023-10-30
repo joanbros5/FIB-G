@@ -1,0 +1,71 @@
+############################################
+            PINTA QUADRAT
+
+void pintaQuad(vec3 minV, vec3 maxV, vec4 color) {
+    gfrontColor = color;
+
+    //PLA X
+    if (minV.x == maxV.x) {
+    	float x = minV.x;
+
+    	//Paint square
+        gl_Position = modelViewProjectionMatrix*vec4(x, minV.y, minV.z, 1);
+        EmitVertex();
+        gl_Position = modelViewProjectionMatrix*vec4(x, maxV.y, minV.z, 1);
+        EmitVertex();
+        gl_Position = modelViewProjectionMatrix*vec4(x, minV.y, maxV.z, 1);
+        EmitVertex();
+        gl_Position = modelViewProjectionMatrix*vec4(x, maxV.y, maxV.z, 1);
+        EmitVertex();
+
+        EndPrimitive();
+    }
+
+    //PLA Y
+    if (minV.y == maxV.y) {
+    	float y = minV.y;
+
+    	//Paint square
+        gl_Position = modelViewProjectionMatrix*vec4(minV.x, y, minV.z, 1);
+        EmitVertex();
+        gl_Position = modelViewProjectionMatrix*vec4(maxV.x, y, minV.z, 1);
+        EmitVertex();
+        gl_Position = modelViewProjectionMatrix*vec4(minV.x, y, maxV.z, 1);
+        EmitVertex();
+        gl_Position = modelViewProjectionMatrix*vec4(maxV.x, y, maxV.z, 1);
+        EmitVertex();
+
+        EndPrimitive();
+    }
+
+    //PLA Z
+    if (minV.z == maxV.z) {
+    	float z = minV.z;
+
+    	//Paint square
+        gl_Position = modelViewProjectionMatrix*vec4(minV.x, minV.y, z, 1);
+        EmitVertex();
+        gl_Position = modelViewProjectionMatrix*vec4(maxV.x, minV.y, z, 1);
+        EmitVertex();
+        gl_Position = modelViewProjectionMatrix*vec4(minV.x, maxV.y, z, 1);
+        EmitVertex();
+        gl_Position = modelViewProjectionMatrix*vec4(maxV.x, maxV.y, z, 1);
+        EmitVertex();
+
+        EndPrimitive();
+    }
+}
+
+############################################
+            COLORS
+
+    vec4 white = vec4(1,1,1,1);
+	vec4 yellow = vec4(1,1,0,1);
+	vec4 red = vec4(1,0,0,1);
+	vec4 green = vec4(0,1,0,1);
+	vec4 blue = vec4(0,0,1,1);
+	vec4 orange = vec4(1,0.6,0,1);
+	vec4 black = vec4(0,0,0,1);
+
+############################################
+
