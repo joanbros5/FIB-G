@@ -1,0 +1,9 @@
+SmilePlasma.pdf:
+    Smile: Objetos que "miran" a la camara
+    Moothstep: Moothstep con rotaciones, traslaciones...
+    Plasma: Sinusoidal y mix colores
+    Dalify: Escalados
+    8lights: 8 luces + phong
+
+    Para ejecutar:
+        ~/assig/grau-g/Viewer/GLarenaSL
