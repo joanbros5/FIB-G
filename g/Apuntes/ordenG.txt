@@ -1,0 +1,12 @@
+glDrawElement
+glPosition
+Vertex Shader
+Clipping
+Division Perspectiva
+Geometry Shader
+Rasterizacion // Crides a dFdx dFxy
+Interpolacion
+Fragment Shader
+Stencil Test
+Depth Test
+Alpha Blending
